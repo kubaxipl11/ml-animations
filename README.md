@@ -137,9 +137,28 @@ A probabilistic data structure explorer.
   2. **⚠️ False Positive Lab**: Deliberately create collisions to understand why "Probably Yes" exists.
   3. **🎛️ Tuning Studio**: Interactive graph to find the optimal $k$ (hash functions) for your data.
 - **Features:**
-  - Real-time bit array visualization.
-  - False positive probability calculator.
-  - "Sweet spot" optimization guide.
+### Gradient Descent Animation
+
+A step-by-step guide to the "Learning Process" of neural networks.
+
+- **4 Learning Modes:**
+  1. **🏔️ The Hiker**: Intuitive analogy of a hiker in the fog feeling the slope.
+  2. **📉 2D Slope Lab**: Connecting the hiker to the math ($dy/dx$) and tangent lines.
+  3. **🏞️ 3D Landscape**: Exploring complex terrain with local minima using Three.js.
+  4. **🎛️ Tuning Studio**: Experimenting with Learning Rates (Too Slow vs. Too Fast).
+- **Features:**
+### PageRank Animation
+
+The algorithm that built Google.
+
+- **3 Learning Modes:**
+  1. **🕸️ Graph Builder**: Build your own "Mini-Internet" by adding nodes and links.
+  2. **🏄 Random Surfer**: Visualize a Monte Carlo simulation of a user clicking random links.
+  3. **👑 Power Method**: Watch the "Rank Juice" flow and settle into a steady state mathematically.
+- **Features:**
+  - Interactive Force-Directed Graph.
+  - Real-time probability heatmaps.
+  - Iterative convergence visualization.
 
 ## Getting Started
 
@@ -234,6 +253,22 @@ npm run dev
 
 ```bash
 cd bloom-filter-animation
+npm install
+npm run dev
+```
+
+#### Gradient Descent Animation
+
+```bash
+cd gradient-descent-animation
+npm install
+npm run dev
+```
+
+#### PageRank Animation
+
+```bash
+cd pagerank-animation
 npm install
 npm run dev
 ```
