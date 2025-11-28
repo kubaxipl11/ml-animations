@@ -307,6 +307,19 @@ The core algorithm where the agent learns from experience.
   - Real-time training graphs.
   - Adjustable learning parameters.
 
+### Part 3: Exploration & Optimization
+
+Mastering the trade-offs in Reinforcement Learning.
+
+- **3 Learning Modes:**
+  1. **🎲 Epsilon-Greedy**: Visualize the Explore vs Exploit dilemma.
+  2. **🧗 The Cliff**: Risk vs Reward - why optimal isn't always safe.
+  3. **🎛️ Hyperparameters**: Interactive tuning lab for Alpha and Gamma.
+- **Features:**
+  - Live exploration stats.
+  - Cliff walking simulation.
+  - Learning curve projections.
+
 ## Getting Started
 
 ### Prerequisites
@@ -512,6 +525,14 @@ npm run dev
 
 ```bash
 cd q-learning-animation
+npm install
+npm run dev
+```
+
+#### RL Exploration Animation (Part 3)
+
+```bash
+cd rl-exploration-animation
 npm install
 npm run dev
 ```
