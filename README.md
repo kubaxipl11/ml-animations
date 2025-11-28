@@ -109,8 +109,28 @@ A demonstration of QR decomposition using the Gram-Schmidt process.
   - Shows transformation of matrix columns into orthonormal basis.
   - Visualizes Q (orthonormal columns) and R (upper triangular).
   - Practice mode with QR decomposition exercises.
-  - Formula hints for Gram-Schmidt process.
-  - ML use cases (least squares, linear regression).
+### LSTM Animation (Deep Dive)
+
+A "Bit-by-Bit" interactive guide to Long Short-Term Memory networks.
+
+- **4-Mode Learning System:**
+  1. **📚 The Conveyor Belt**: Intuitive analogy for cell state flow.
+  2. **🔬 Anatomy Lab**: Interactive component explorer (Sigmoid, Tanh, Gates).
+  3. **🎬 Bit-by-Bit Flow**: Granular 8-step animation of a single time step.
+  4. **🔁 Sequence View**: Visualization of LSTM unrolled over time.
+- **Features:**
+### Spearman Correlation Animation
+
+An interactive exploration of Rank Correlation and Robustness.
+
+- **3 Learning Modes:**
+  1. **💡 Concept**: Visualizing the transformation from Raw Space (curved) to Rank Space (linear).
+  2. **🧮 Calculation Lab**: Step-by-step animated table showing sorting, ranking, and formula application.
+  3. **⚖️ Robustness**: Interactive playground to test outlier sensitivity (Pearson vs. Spearman).
+- **Features:**
+  - Interactive scatter plots with toggleable rank views.
+  - Real-time correlation calculation.
+  - "Break the Correlation" challenge using outliers.
 
 ## Getting Started
 
@@ -181,6 +201,22 @@ npm run dev
 
 ```bash
 cd qr-decomposition-animation
+npm install
+npm run dev
+```
+
+#### LSTM Animation
+
+```bash
+cd lstm-animation
+npm install
+npm run dev
+```
+
+#### Spearman Correlation Animation
+
+```bash
+cd spearman-correlation-animation
 npm install
 npm run dev
 ```
