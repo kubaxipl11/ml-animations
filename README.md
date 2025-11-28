@@ -320,6 +320,30 @@ Mastering the trade-offs in Reinforcement Learning.
   - Cliff walking simulation.
   - Learning curve projections.
 
+## Information Theory Series
+
+### Part 1: Entropy & Information
+
+The math of uncertainty and surprise.
+
+- **2 Learning Modes:**
+  1. **💡 The Bit**: Visualize Information as "Surprise" (-log p).
+  2. **📊 Entropy**: Interactive distribution editor to maximize/minimize uncertainty.
+- **Features:**
+  - Real-time bit calculation.
+  - Dynamic probability adjustment.
+
+### Part 2: Cross-Entropy & KL Divergence
+
+The bridge between Probability and Machine Learning optimization.
+
+- **2 Learning Modes:**
+  1. **🎯 Cross-Entropy**: Visualize the Loss Function used in classification.
+  2. **⚖️ KL Divergence**: Visualize the "Distance" between two distributions.
+- **Features:**
+  - Interactive prediction matching.
+  - Gaussian distribution comparison.
+
 ## Getting Started
 
 ### Prerequisites
@@ -533,6 +557,22 @@ npm run dev
 
 ```bash
 cd rl-exploration-animation
+npm install
+npm run dev
+```
+
+#### Entropy Animation (Part 1)
+
+```bash
+cd entropy-animation
+npm install
+npm run dev
+```
+
+#### Cross-Entropy Animation (Part 2)
+
+```bash
+cd cross-entropy-animation
 npm install
 npm run dev
 ```

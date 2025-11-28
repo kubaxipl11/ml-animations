@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
-import LossPanel from './LossPanel';
-import DivergencePanel from './DivergencePanel';
-import { Target, Scale } from 'lucide-react';
+import SurprisePanel from './SurprisePanel';
+import EntropyPanel from './EntropyPanel';
+import { Lightbulb, BarChart3 } from 'lucide-react';
 
 const TABS = [
-    { id: 'loss', label: '1. Cross-Entropy (The Cost)', icon: Target },
-    { id: 'divergence', label: '2. KL Divergence (The Distance)', icon: Scale }
+    { id: 'surprise', label: '1. The Bit (Surprise)', icon: Lightbulb },
+    { id: 'entropy', label: '2. Entropy (Uncertainty)', icon: BarChart3 }
 ];
 
 export default function App() {
-    const [activeTab, setActiveTab] = useState('loss');
+    const [activeTab, setActiveTab] = useState('surprise');
 
     const renderContent = () => {
         switch (activeTab) {
-            case 'loss': return <LossPanel />;
-            case 'divergence': return <DivergencePanel />;
+            case 'surprise': return <SurprisePanel />;
+            case 'entropy': return <EntropyPanel />;
             default: return null;
         }
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-orange-950 to-amber-950 p-4 font-sans text-slate-100">
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-pink-950 to-rose-950 p-4 font-sans text-slate-100">
             <div className="max-w-7xl mx-auto">
                 <header className="mb-6 text-center">
-                    <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 mb-2 tracking-tight">
-                        Cross-Entropy & KL
+                    <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-rose-400 to-red-400 mb-2 tracking-tight">
+                        Information Theory
                     </h1>
                     <p className="text-slate-300 text-lg">
-                        Part 2: Loss Functions and Distances.
+                        Part 1: Bits, Surprise, and Entropy.
                     </p>
                 </header>
 
@@ -40,7 +40,7 @@ export default function App() {
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all transform hover:scale-105 ${activeTab === tab.id
-                                        ? 'bg-gradient-to-r from-orange-600 to-amber-600 text-white shadow-lg scale-105'
+                                        ? 'bg-gradient-to-r from-pink-600 to-rose-600 text-white shadow-lg scale-105'
                                         : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 shadow-sm border border-slate-700'
                                     }`}
                             >
