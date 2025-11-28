@@ -23,8 +23,22 @@ A visual explanation of the ReLU (Rectified Linear Unit) activation function.
 - **Visualizes:** z = W·X + b → ReLU(z) = max(0, z)
 - **Features:**
   - Step-by-step animation showing dot product, bias addition, and ReLU application.
+  - Interactive ReLU graph visualization synchronized with steps.
   - Practice mode with randomly generated problems.
   - Formula reference and hints.
+  - Built with Three.js for 3D rendering (orthographic view).
+
+### Leaky ReLU Activation Animation
+
+A visual explanation of the Leaky ReLU activation function.
+
+- **Visualizes:** z = W·X + b → Leaky ReLU(z) = z if z > 0, else α×z
+- **Features:**
+  - Step-by-step animation showing dot product, bias addition, and Leaky ReLU application.
+  - Interactive Leaky ReLU graph visualization with reference line.
+  - Practice mode with randomly generated problems.
+  - Comparison with standard ReLU (shows y=z reference line).
+  - α (alpha) parameter visualization (default: 0.01).
   - Built with Three.js for 3D rendering (orthographic view).
 
 ## Getting Started
@@ -48,6 +62,14 @@ npm run dev
 
 ```bash
 cd relu-animation
+npm install
+npm run dev
+```
+
+#### Leaky ReLU Activation Animation
+
+```bash
+cd leaky-relu-animation
 npm install
 npm run dev
 ```
