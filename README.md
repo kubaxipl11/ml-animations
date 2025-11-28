@@ -294,6 +294,19 @@ The building blocks of Reinforcement Learning.
   - Level Editor.
   - Interactive Discount Factor visualization.
 
+### Part 2: Q-Learning Algorithm
+
+The core algorithm where the agent learns from experience.
+
+- **3 Learning Modes:**
+  1. **📊 The Q-Table**: Visualize the agent's brain (State-Action Values).
+  2. **🧮 The Bellman Update**: Step-by-step math visualization of the learning rule.
+  3. **🏋️ Training Loop**: Watch the agent explore and master the maze in real-time.
+- **Features:**
+  - Interactive Q-Table inspection.
+  - Real-time training graphs.
+  - Adjustable learning parameters.
+
 ## Getting Started
 
 ### Prerequisites
@@ -491,6 +504,14 @@ npm run dev
 
 ```bash
 cd rl-foundations-animation
+npm install
+npm run dev
+```
+
+#### Q-Learning Animation (Part 2)
+
+```bash
+cd q-learning-animation
 npm install
 npm run dev
 ```
