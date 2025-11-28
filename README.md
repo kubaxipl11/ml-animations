@@ -68,6 +68,50 @@ A visual guide to 2D convolution operations used in Convolutional Neural Network
   - Practice mode with different kernel types (edge detection, sharpen, blur, identity).
   - Interactive output cell computation with hints.
 
+### SVD Animation
+
+A comprehensive visualization of Singular Value Decomposition (SVD).
+
+- **Visualizes:** A (m×n) = U (m×m) × Σ (m×n) × V^T (n×n)
+- **Features:**
+  - Step-by-step SVD decomposition animation (9 steps).
+  - Shows U (left singular vectors), Σ (singular values diagonal), V^T (right singular vectors).
+  - Visualizes reconstruction: A = UΣV^T.
+  - Practice mode with exercises to find singular values.
+  - Hints with formulas (eigenvalues of A^TA).
+  - Educational info on ML applications (PCA, compression, recommender systems).
+
+### Eigenvalue Decomposition Animation ✨ **Enhanced with Geometric Intuition**
+
+A comprehensive learning system teaching eigenvalues **from first principles** with interactive exploration.
+
+- **Visualizes:** A = Q Λ Q^T (for symmetric A)
+- **5 Learning Modes:**
+  - **📚 Tutorial Mode** - 7-step conceptual learning (transforms → eigenvectors → equation → decomposition).
+  - **🌐 Geometric Visualizer** - Interactive circle → ellipse transformation showing eigenvectors as axes.
+  - **🎮 Interactive Explorer** - Drag vectors to see transformation in real-time, detects eigenvector alignment.
+  - **🎬 Matrix Decomposition** - Step-by-step animation of A = QΛQ^T (7 steps).
+  - **✏️ Practice Exercises** - Interactive problems with hints and validation.
+- **Features:**
+  - Learn eigenvalues from scratch with no prior knowledge required.
+  - Geometric intuition built before algebraic formulas.
+  - Hands-on exploration with draggable vectors.
+  - Tab-based interface for progressive learning.
+  - ML applications highlighted (PCA, covariance analysis).
+
+### QR Decomposition Animation
+
+A demonstration of QR decomposition using the Gram-Schmidt process.
+
+- **Visualizes:** A = Q × R (orthonormal Q, upper triangular R)
+- **Features:**
+  - Step-by-step Gram-Schmidt orthogonalization (6 steps).
+  - Shows transformation of matrix columns into orthonormal basis.
+  - Visualizes Q (orthonormal columns) and R (upper triangular).
+  - Practice mode with QR decomposition exercises.
+  - Formula hints for Gram-Schmidt process.
+  - ML use cases (least squares, linear regression).
+
 ## Getting Started
 
 ### Prerequisites
@@ -113,6 +157,30 @@ npm run dev
 
 ```bash
 cd conv2d-animation
+npm install
+npm run dev
+```
+
+#### SVD Animation
+
+```bash
+cd svd-animation
+npm install
+npm run dev
+```
+
+#### Eigenvalue Decomposition Animation
+
+```bash
+cd eigenvalue-animation
+npm install
+npm run dev
+```
+
+#### QR Decomposition Animation
+
+```bash
+cd qr-decomposition-animation
 npm install
 npm run dev
 ```
