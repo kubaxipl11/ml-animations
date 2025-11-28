@@ -13,6 +13,18 @@ A step-by-step visual guide to matrix multiplication.
   - Step-by-step animation of row-column dot products.
   - Color-coded highlighting of active rows and columns.
   - Interactive controls (Play, Reset, Next/Prev Step).
+  - Practice mode with different matrices.
+  - Built with Three.js for 3D rendering (orthographic view).
+
+### ReLU Activation Animation
+
+A visual explanation of the ReLU (Rectified Linear Unit) activation function.
+
+- **Visualizes:** z = W·X + b → ReLU(z) = max(0, z)
+- **Features:**
+  - Step-by-step animation showing dot product, bias addition, and ReLU application.
+  - Practice mode with randomly generated problems.
+  - Formula reference and hints.
   - Built with Three.js for 3D rendering (orthographic view).
 
 ## Getting Started
@@ -24,22 +36,23 @@ A step-by-step visual guide to matrix multiplication.
 
 ### Installation & Running
 
-1. Navigate to the animation directory:
-   ```bash
-   cd matrix-multiplication-animation
-   ```
+#### Matrix Multiplication Animation
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+cd matrix-multiplication-animation
+npm install
+npm run dev
+```
 
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
+#### ReLU Activation Animation
 
-4. Open your browser at the URL shown in the terminal (usually `http://localhost:5173`).
+```bash
+cd relu-animation
+npm install
+npm run dev
+```
+
+Open your browser at the URL shown in the terminal (usually `http://localhost:5173`).
 
 ## Technologies Used
 
