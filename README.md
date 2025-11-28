@@ -252,6 +252,20 @@ Quantifying center and spread.
   - Deviation visualization for variance.
   - Risk-adjusted decision making with risk tolerance slider.
 
+### Markov Chains Animation
+
+The engine behind PageRank and Text Generation.
+
+- **4 Learning Modes:**
+  1. **🐸 The Markov Property**: Frog simulator demonstrating memorylessness.
+  2. **🕸️ Transition Matrix**: Interactive graph-to-matrix builder.
+  3. **⚖️ Stationary Distribution**: Visualizing convergence to steady state.
+  4. **📝 Text Generation**: Mini-LLM using bigram models.
+- **Features:**
+  - Animated simulations.
+  - Real-time matrix updates.
+  - Text training and generation playground.
+
 ## Getting Started
 
 ### Prerequisites
@@ -425,6 +439,14 @@ npm run dev
 
 ```bash
 cd expected-value-variance-animation
+npm install
+npm run dev
+```
+
+#### Markov Chains Animation
+
+```bash
+cd markov-chains-animation
 npm install
 npm run dev
 ```
