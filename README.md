@@ -54,6 +54,20 @@ A visual demonstration of a two-layer neural network with three inputs and ReLU 
   - Shows how negative values become zero after ReLU.
   - Color-coded matrices for easy tracking.
 
+### 2D Convolution Animation
+
+A visual guide to 2D convolution operations used in Convolutional Neural Networks (CNNs).
+
+- **Visualizes:** Input (5×5) ∗ Kernel (3×3) = Output (3×3)
+- **Features:**
+  - Animated kernel sliding across input matrix.
+  - Real-time element-wise multiplication and summation display.
+  - Color-coded highlighting showing kernel position on input.
+  - Adjustable animation speed.
+  - Click-to-jump to any convolution step.
+  - Practice mode with different kernel types (edge detection, sharpen, blur, identity).
+  - Interactive output cell computation with hints.
+
 ## Getting Started
 
 ### Prerequisites
@@ -91,6 +105,14 @@ npm run dev
 
 ```bash
 cd conv-relu-animation
+npm install
+npm run dev
+```
+
+#### 2D Convolution Animation
+
+```bash
+cd conv2d-animation
 npm install
 npm run dev
 ```
