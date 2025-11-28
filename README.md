@@ -211,6 +211,21 @@ Stabilizing deep network training.
   - Interactive batch size adjustment.
   - Gradient flow demonstration.
 
+## Probability Theory Series
+
+### Conditional Probability & Bayes' Theorem Animation
+
+Updating beliefs with evidence.
+
+- **3 Learning Modes:**
+  1. **🎲 Conditional Probability**: Interactive card deck demonstrating P(A|B).
+  2. **🔄 Bayes' Theorem**: Formula breakdown with sliders for prior, likelihood, and posterior.
+  3. **🏥 Medical Testing**: Real-world application with disease diagnosis.
+- **Features:**
+  - Interactive filtering to visualize conditioning.
+  - Real-time Bayes' calculation.
+  - Population grid showing true/false positives.
+
 ## Getting Started
 
 ### Prerequisites
@@ -360,6 +375,14 @@ npm run dev
 
 ```bash
 cd layer-normalization-animation
+npm install
+npm run dev
+```
+
+#### Conditional Probability & Bayes' Theorem Animation
+
+```bash
+cd conditional-probability-animation
 npm install
 npm run dev
 ```
