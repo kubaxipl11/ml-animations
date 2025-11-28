@@ -156,9 +156,38 @@ The algorithm that built Google.
   2. **🏄 Random Surfer**: Visualize a Monte Carlo simulation of a user clicking random links.
   3. **👑 Power Method**: Watch the "Rank Juice" flow and settle into a steady state mathematically.
 - **Features:**
-  - Interactive Force-Directed Graph.
-  - Real-time probability heatmaps.
-  - Iterative convergence visualization.
+### Linear Regression Animation
+
+Finding the line of best fit.
+
+- **3 Learning Modes:**
+  1. **📏 The Residuals**: Manually drag the line to minimize the error squares.
+  2. **✍️ Interactive Fitter**: Click to add points and see the OLS formula update instantly.
+  3. **🥣 The Cost Landscape**: Visualize the Mean Squared Error as a 3D surface bowl.
+- **Features:**
+### Embeddings Animation
+
+Where words become geometry.
+
+- **3 Learning Modes:**
+  1. **🧮 Word Algebra**: Visualizing "King - Man + Woman = Queen" with vectors.
+  2. **📐 Similarity Lab**: Interactive Cosine Similarity calculator.
+  3. **🌌 3D Semantic Space**: Fly through a galaxy of word clusters.
+- **Features:**
+  - Vector arithmetic visualization.
+  - 3D Point Cloud with Three.js.
+### Cosine Similarity Animation
+
+The math behind recommendations and search.
+
+- **3 Learning Modes:**
+  1. **✖️ The Dot Product**: Visualizing projections and the mechanics of the formula.
+  2. **🎬 Movie Matcher**: Build a recommender system matching users by genre preferences.
+  3. **🔍 Search Engine**: Rank documents by relevance to a search query.
+- **Features:**
+  - Interactive vector manipulation.
+  - Radar charts for multi-dimensional comparison.
+  - Real-time similarity scoring.
 
 ## Getting Started
 
@@ -269,6 +298,30 @@ npm run dev
 
 ```bash
 cd pagerank-animation
+npm install
+npm run dev
+```
+
+#### Linear Regression Animation
+
+```bash
+cd linear-regression-animation
+npm install
+npm run dev
+```
+
+#### Embeddings Animation
+
+```bash
+cd embeddings-animation
+npm install
+npm run dev
+```
+
+#### Cosine Similarity Animation
+
+```bash
+cd cosine-similarity-animation
 npm install
 npm run dev
 ```
