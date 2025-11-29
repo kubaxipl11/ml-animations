@@ -1,0 +1,27 @@
+[package]
+name = "mini-markov"
+version = "0.1.0"
+edition = "2021"
+description = "Markov Chain from scratch in Rust - Text generation and state transitions"
+authors = ["Daniel Sobrado"]
+
+[dependencies]
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[[bin]]
+name = "demo_text"
+path = "src/bin/demo_text.rs"
+
+[[bin]]
+name = "demo_weather"
+path = "src/bin/demo_weather.rs"
+
+[[bin]]
+name = "demo_music"
+path = "src/bin/demo_music.rs"
+
+[[bin]]
+name = "train_shakespeare"
+path = "src/bin/train_shakespeare.rs"

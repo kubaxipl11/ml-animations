@@ -1,0 +1,14 @@
+# Build artifacts
+/target/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Cargo lock (optional - include if library, exclude if application)
+# Cargo.lock
