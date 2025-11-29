@@ -26,11 +26,13 @@ npm run dev
 - [Transformers & Attention](#transformers--attention)
 - [Neural Networks](#neural-networks)
 - [Advanced Models](#advanced-models)
+- [Diffusion Models](#diffusion-models)
 - [Math Fundamentals](#math-fundamentals)
 - [Probability & Statistics](#probability--statistics)
 - [Reinforcement Learning](#reinforcement-learning)
 - [Algorithms & Data Structures](#algorithms--data-structures)
 - [Information Theory](#information-theory)
+- [Mini Diffusion (Rust)](#mini-diffusion-rust-implementation)
 
 ---
 
@@ -438,6 +440,116 @@ cd fine-tuning-animation && npm install && npm run dev
 
 ---
 
+## Diffusion Models
+
+Interactive animations explaining Stable Diffusion 3 and Flux-style diffusion models.
+
+### SD3 Overview Animation
+
+Understanding the complete SD3 architecture and how all components work together.
+
+![SD3 Overview](screenshots/sd3-overview.png)
+
+- **Visualizes:** Text → CLIP/T5 → DiT → VAE Decoder → Image
+- **Features:**
+  - Complete pipeline overview
+  - Component interactions
+  - Data flow visualization
+
+```bash
+cd sd3-overview-animation && npm install && npm run dev
+```
+
+### Flow Matching Animation
+
+Modern training approach used in SD3 and Flux.
+
+![Flow Matching](screenshots/flow-matching.png)
+
+- **Visualizes:** ODE-based generation paths
+- **Features:**
+  - Rectified Flow concepts
+  - Euler solver stepping
+  - Logit-normal timestep sampling
+
+```bash
+cd flow-matching-animation && npm install && npm run dev
+```
+
+### DiT Transformer Animation
+
+Diffusion Transformer - replacing U-Net with transformers.
+
+- **Visualizes:** Patch embedding → Transformer blocks → Unpatchify
+- **Features:**
+  - AdaLN (Adaptive LayerNorm) conditioning
+  - Patch-based image processing
+  - Timestep modulation
+
+```bash
+cd dit-transformer-animation && npm install && npm run dev
+```
+
+### Joint Attention Animation
+
+Multi-modal attention in SD3/Flux models.
+
+- **Visualizes:** Text ↔ Image bidirectional attention
+- **Features:**
+  - RoPE (Rotary Position Embeddings)
+  - Separate modality projections
+  - Attention pattern visualization
+
+```bash
+cd joint-attention-animation && npm install && npm run dev
+```
+
+### CLIP Text Encoder Animation
+
+CLIP encoder for visual concept understanding.
+
+- **Visualizes:** Text → BPE Tokenization → Transformer → Embeddings
+- **Features:**
+  - 12-layer transformer architecture
+  - Causal attention masking
+  - Pooled embedding extraction
+
+```bash
+cd clip-text-encoder-animation && npm install && npm run dev
+```
+
+### T5 Text Encoder Animation
+
+T5-XXL encoder for detailed text understanding.
+
+- **Visualizes:** Text → SentencePiece → Bidirectional Encoder
+- **Features:**
+  - 24-layer encoder architecture
+  - Relative position bias
+  - RMSNorm vs LayerNorm
+
+```bash
+cd t5-text-encoder-animation && npm install && npm run dev
+```
+
+### Diffusion Tokenizer Animation
+
+Understanding tokenization for diffusion models.
+
+![Diffusion Tokenizer](screenshots/diffusion-tokenizer.png)
+
+- **Visualizes:** BPE and SentencePiece tokenization
+- **Features:**
+  - CLIP vs T5 tokenizer comparison
+  - Vocabulary structure
+  - Word boundary markers
+
+```bash
+cd diffusion-tokenizer-animation && npm install && npm run dev
+```
+
+---
+
 ## Math Fundamentals
 
 ### Matrix Multiplication Animation
@@ -813,6 +925,49 @@ The bridge between Probability and Machine Learning optimization.
 cd cross-entropy-animation && npm install && npm run dev
 ```
 
+---
+
+## Mini Diffusion (Rust Implementation)
+
+A complete diffusion model implementation in Rust, built from scratch for educational purposes. This demonstrates the core concepts of modern diffusion models (like SD3 and Flux) while teaching Rust programming patterns.
+
+### Features
+
+| Component | Description | Status |
+|-----------|-------------|--------|
+| Tensor | Multi-dim arrays, math ops | ✅ Working |
+| U-Net | Encoder-decoder with skips | ✅ Working |
+| DDPM/DDIM Sampling | Stochastic & deterministic | ✅ Working |
+| BPE/Unigram Tokenizers | CLIP & T5 style | ✅ Working |
+| Flow Matching | SD3-style training | ✅ Working |
+| VAE/DiT/Joint Attention | Architecture structures | ⚠️ Structure |
+
+### Quick Start
+
+```bash
+cd mini-diffusion
+
+# Build
+cargo build --release
+
+# Run demos
+cargo run --bin generate --release   # Generate images (random weights)
+cargo run --bin train --release      # Training structure demo
+cargo run --bin demo_sd3 --release   # SD3 components demo
+
+# Run tests
+cargo test
+```
+
+### Rust Concepts Demonstrated
+
+- **Ownership & Borrowing**: Memory-safe tensor operations
+- **Traits**: Common interfaces for layers and modules  
+- **Builder Pattern**: Configuration structs
+- **Error Handling**: Result types for shape mismatches
+- **Type Safety**: Compile-time dimension checking
+
+See [mini-diffusion/README.md](mini-diffusion/README.md) for full documentation.
 
 ---
 
@@ -823,6 +978,7 @@ cd cross-entropy-animation && npm install && npm run dev
 - **GSAP**: Smooth animations
 - **Vite**: Fast build tool and development server
 - **Tailwind CSS**: Styling
+- **Rust**: Mini-diffusion implementation (ndarray, image crates)
 
 ## Contributing
 

@@ -22,7 +22,6 @@
 
 use crate::tensor::Tensor;
 use crate::nn::Linear;
-use crate::clip::LayerNorm;
 
 /// QKV Projection for a single modality
 ///

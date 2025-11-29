@@ -23,7 +23,7 @@
 
 use crate::tensor::Tensor;
 use crate::nn::Linear;
-use crate::clip::{LayerNorm, gelu, MLP};
+use crate::clip::{LayerNorm, MLP};
 use crate::joint_attention::JointAttention;
 
 /// Patch Embedding
@@ -112,16 +112,16 @@ impl PatchEmbed {
     /// Reverse: convert patch embeddings back to image
     pub fn unpatchify(&self, x: &Tensor, height: usize, width: usize) -> Tensor {
         let shape = x.shape();
-        let (batch, num_patches, _) = match shape {
+        let (batch, _num_patches, _) = match shape {
             [b, n, d] => (*b, *n, *d),
             _ => panic!("Expected [B, N, D] input"),
         };
         
-        let num_patches_h = height / self.patch_size;
-        let num_patches_w = width / self.patch_size;
+        let _num_patches_h = height / self.patch_size;
+        let _num_patches_w = width / self.patch_size;
         
         // This would require a reverse projection - for now return zeros
-        let output_size = batch * height * width * self.in_channels;
+        let _output_size = batch * height * width * self.in_channels;
         Tensor::zeros(&[batch, height, width, self.in_channels])
     }
 }

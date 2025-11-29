@@ -9,6 +9,9 @@
 //! Both are subword tokenizers - they break words into smaller pieces,
 //! allowing the model to handle any text (even misspellings and new words).
 
+// Allow dead code - this is educational code showing architecture structure
+#![allow(dead_code)]
+
 use std::collections::{HashMap, HashSet};
 
 /// Byte-Pair Encoding Tokenizer

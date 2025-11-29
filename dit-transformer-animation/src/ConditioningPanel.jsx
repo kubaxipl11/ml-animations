@@ -221,7 +221,7 @@ export default function ConditioningPanel() {
             <p className="text-sm text-gray-500">Recommended range for SD3</p>
           </div>
           <div className="bg-red-800/30 rounded-xl p-4">
-            <p className="font-bold text-red-400 mb-2">scale > 10</p>
+            <p className="font-bold text-red-400 mb-2">scale {'>'}  10</p>
             <p className="text-sm text-gray-500">Over-saturation, artifacts</p>
           </div>
         </div>

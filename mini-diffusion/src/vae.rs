@@ -8,6 +8,9 @@
 //! this to roughly 64x64x4 = 16,384 values - a 48x reduction! This makes
 //! diffusion tractable on consumer hardware.
 
+// Allow dead code - this is educational code showing architecture structure
+#![allow(dead_code)]
+
 use crate::tensor::Tensor;
 use crate::nn::{Conv2d, Linear, GroupNorm};
 
