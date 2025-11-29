@@ -33,6 +33,8 @@ npm run dev
 - [Algorithms & Data Structures](#algorithms--data-structures)
 - [Information Theory](#information-theory)
 - [Mini Diffusion (Rust)](#mini-diffusion-rust-implementation)
+- [Mini-NN (Rust)](#mini-nn-rust-implementation)
+- [Neural Network Animation](#neural-network-animation)
 
 ---
 
@@ -968,6 +970,72 @@ cargo test
 - **Type Safety**: Compile-time dimension checking
 
 See [mini-diffusion/README.md](mini-diffusion/README.md) for full documentation.
+
+---
+
+## Mini-NN (Rust Implementation)
+
+A complete neural network implementation in pure Rust, built from first principles. No ML frameworks - just linear algebra with `ndarray`.
+
+### 🏆 Results
+
+Tested on the **Titanic Survival Prediction** dataset:
+
+| Method | Accuracy |
+|--------|----------|
+| Logistic Regression | ~77% |
+| Random Forest | ~78% |
+| Gradient Boosting | ~80% |
+| sklearn Neural Network | ~79% |
+| Top Kaggle Submissions | ~83% |
+| **Our Mini-NN** | **84.3%** ✨ |
+
+### Features
+
+| Component | Description | Status |
+|-----------|-------------|--------|
+| Tensor Ops | Matrix multiply, transpose, slicing | ✅ Working |
+| Activations | ReLU, Sigmoid, Tanh, Softmax, LeakyReLU | ✅ Working |
+| Loss Functions | MSE, CrossEntropy, BinaryCrossEntropy | ✅ Working |
+| Optimizers | SGD, Momentum, Adam | ✅ Working |
+| Layers | Dense with Xavier/He init | ✅ Working |
+| Training | Mini-batch, early stopping | ✅ Working |
+
+### Quick Start
+
+```bash
+cd mini-nn
+
+# Build
+cargo build --release
+
+# Run demos
+cargo run --bin demo_xor --release       # XOR problem (100% accuracy)
+cargo run --bin demo_layers --release    # Educational forward pass
+cargo run --bin train_titanic --release  # Titanic benchmark (84.3%)
+```
+
+See [mini-nn/README.md](mini-nn/README.md) for full documentation.
+
+---
+
+## Neural Network Animation
+
+Interactive visualization of forward and backward propagation through a neural network.
+
+![Neural Network Animation](screenshots/neural-network-animation.png)
+
+- **Visualizes:** Forward propagation, backpropagation, gradient descent
+- **Features:**
+  - Step-by-step forward pass with activation values
+  - Backward propagation with gradient visualization
+  - XOR problem demonstration
+  - Weight update visualization
+  - Mathematical formulas displayed
+
+```bash
+cd neural-network-animation && npm install && npm run dev
+```
 
 ---
 
