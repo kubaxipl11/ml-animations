@@ -121,46 +121,12 @@ Breaking text into tokens - the first step in NLP pipelines.
 
 - **Visualizes:** Text → Tokens → IDs
 - **3 Learning Modes:**
-  1. **✂️ Word Tokenization**: Simple whitespace and punctuation splitting
-  2. **🧩 Subword (BPE)**: Byte Pair Encoding algorithm
-  3. **🔤 SentencePiece**: Unigram language model tokenization
-- **Features:**
-  - Interactive tokenization playground
-  - Vocabulary size impact visualization
-  - Encoding/decoding demonstration
-
-```bash
-cd tokenization-animation && npm install && npm run dev
-```
-
----
-
-## Transformers & Attention
-
-### Attention Mechanism Animation
-
-The core intuition behind attention - learning what to focus on.
-
-![Attention Mechanism](screenshots/attention-mechanism.png)
-
 - **Visualizes:** Query-Key-Value attention mechanism
 - **3 Learning Modes:**
   1. **📚 Library Search**: Intuitive analogy for Q, K, V
   2. **🌍 Translation**: Attention in sequence-to-sequence models
   3. **💬 Conversation**: Context-aware attention
 
-```bash
-cd attention-mechanism-animation && npm install && npm run dev
-```
-
-### Self-Attention Animation
-
-The heart of the Transformer architecture.
-
-![Self-Attention](screenshots/self-attention.png)
-
-- **Visualizes:** softmax(QK^T / √d)V
-- **3 Learning Modes:**
   1. **🔑 The Concept**: Intuitive "Library" analogy for Query, Key, and Value
   2. **🧮 The Mechanism**: Step-by-step visualization of the math
   3. **🕸️ Playground**: Interactive text attention visualization (Coreference Resolution)
@@ -483,25 +449,6 @@ cd flow-matching-animation && npm install && npm run dev
 ### DiT Transformer Animation
 
 Diffusion Transformer - replacing U-Net with transformers.
-
-- **Visualizes:** Patch embedding → Transformer blocks → Unpatchify
-- **Features:**
-  - AdaLN (Adaptive LayerNorm) conditioning
-  - Patch-based image processing
-  - Timestep modulation
-
-```bash
-cd dit-transformer-animation && npm install && npm run dev
-```
-
-### Joint Attention Animation
-
-Multi-modal attention in SD3/Flux models.
-
-- **Visualizes:** Text ↔ Image bidirectional attention
-- **Features:**
-  - RoPE (Rotary Position Embeddings)
-  - Separate modality projections
   - Attention pattern visualization
 
 ```bash
@@ -711,18 +658,6 @@ Updating beliefs with evidence.
 ![Conditional Probability](screenshots/conditional-probability.png)
 
 - **3 Learning Modes:**
-  1. **🎲 Conditional Probability**: Interactive card deck demonstrating P(A|B)
-  2. **🔄 Bayes' Theorem**: Formula breakdown with sliders
-  3. **🏥 Medical Testing**: Real-world application with disease diagnosis
-- **Features:**
-  - Interactive filtering to visualize conditioning
-  - Real-time Bayes' calculation
-  - Population grid showing true/false positives
-
-```bash
-cd conditional-probability-animation && npm install && npm run dev
-```
-
 ### Probability Distributions Animation
 
 Modeling randomness with mathematics.
@@ -896,41 +831,11 @@ cd pagerank-animation && npm install && npm run dev
 ## Information Theory
 
 ### Part 1: Entropy & Information
-
-The math of uncertainty and surprise.
-
-![Entropy](screenshots/entropy.png)
-
-- **2 Learning Modes:**
-  1. **💡 The Bit**: Visualize Information as "Surprise" (-log p)
-  2. **📊 Entropy**: Interactive distribution editor to maximize/minimize uncertainty
-- **Features:**
-  - Real-time bit calculation
-  - Dynamic probability adjustment
-
-```bash
-cd entropy-animation && npm install && npm run dev
-```
-
 ### Part 2: Cross-Entropy & KL Divergence
 
 The bridge between Probability and Machine Learning optimization.
 
 ![Cross-Entropy](screenshots/cross-entropy.png)
-
-- **2 Learning Modes:**
-  1. **🎯 Cross-Entropy**: Visualize the Loss Function used in classification
-  2. **⚖️ KL Divergence**: Visualize the "Distance" between two distributions
-- **Features:**
-  - Interactive prediction matching
-  - Gaussian distribution comparison
-
-```bash
-cd cross-entropy-animation && npm install && npm run dev
-```
-
----
-
 ## Mini Diffusion (Rust Implementation)
 
 A complete diffusion model implementation in Rust, built from scratch for educational purposes. This demonstrates the core concepts of modern diffusion models (like SD3 and Flux) while teaching Rust programming patterns.

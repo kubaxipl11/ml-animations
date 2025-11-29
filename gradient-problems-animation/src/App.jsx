@@ -1,33 +1,33 @@
 import React, { useState } from 'react';
-import ConceptPanel from './ConceptPanel';
-import BPEPanel from './BPEPanel';
-import { Type, Scissors } from 'lucide-react';
+import ChainPanel from './ChainPanel';
+import SolutionPanel from './SolutionPanel';
+import { Link, ShieldCheck } from 'lucide-react';
 
 const TABS = [
-    { id: 'concept', label: '1. Char vs Word', icon: Type },
-    { id: 'bpe', label: '2. Byte Pair Encoding (BPE)', icon: Scissors }
+    { id: 'chain', label: '1. The Chain of Destruction', icon: Link },
+    { id: 'solution', label: '2. The Residual Fix', icon: ShieldCheck }
 ];
 
 export default function App() {
-    const [activeTab, setActiveTab] = useState('concept');
+    const [activeTab, setActiveTab] = useState('chain');
 
     const renderContent = () => {
         switch (activeTab) {
-            case 'concept': return <ConceptPanel />;
-            case 'bpe': return <BPEPanel />;
+            case 'chain': return <ChainPanel />;
+            case 'solution': return <SolutionPanel />;
             default: return null;
         }
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-purple-950 to-fuchsia-950 p-4 font-sans text-slate-100">
+        <div className="min-h-screen bg-gradient-to-br from-slate-950 via-red-950 to-orange-950 p-4 font-sans text-slate-100">
             <div className="max-w-7xl mx-auto">
                 <header className="mb-6 text-center">
-                    <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-fuchsia-400 to-pink-400 mb-2 tracking-tight">
-                        Tokenization
+                    <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-amber-400 mb-2 tracking-tight">
+                        Gradient Problems
                     </h1>
                     <p className="text-slate-300 text-lg">
-                        Part 1: How LLMs Read Text.
+                        Part 2.5: Why Deep Networks are Hard to Train.
                     </p>
                 </header>
 
@@ -40,7 +40,7 @@ export default function App() {
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all transform hover:scale-105 ${activeTab === tab.id
-                                        ? 'bg-gradient-to-r from-purple-600 to-fuchsia-600 text-white shadow-lg scale-105'
+                                        ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white shadow-lg scale-105'
                                         : 'bg-slate-800/50 text-slate-300 hover:bg-slate-700/50 shadow-sm border border-slate-700'
                                     }`}
                             >
