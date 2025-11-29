@@ -34,6 +34,7 @@ npm run dev
 - [Information Theory](#information-theory)
 - [Mini Diffusion (Rust)](#mini-diffusion-rust-implementation)
 - [Mini-NN (Rust)](#mini-nn-rust-implementation)
+- [Mini Markov (Multi-Language)](#mini-markov-multi-language-implementation)
 - [Neural Network Animation](#neural-network-animation)
 
 ---
@@ -1019,6 +1020,105 @@ See [mini-nn/README.md](mini-nn/README.md) for full documentation.
 
 ---
 
+## Mini Markov (Multi-Language Implementation)
+
+Markov Chain implementations from scratch in **Rust**, **Go**, **Java**, and **Python** - demonstrating the same algorithms across languages.
+
+### 🎯 Features
+
+All implementations provide:
+- ✅ Generic Markov chain with configurable n-gram order
+- ✅ Text generation (word-level and character-level)
+- ✅ State machine modeling
+- ✅ Stationary distribution calculation (power iteration)
+- ✅ Entropy measurement
+- ✅ Demo applications (text, weather, music)
+
+### 📊 Verified Results (Consistent Across All Languages)
+
+#### Weather Model Stationary Distribution
+
+Using transition probabilities:
+- Sunny → Sunny: 70%, Cloudy: 20%, Rainy: 10%
+- Cloudy → Sunny: 30%, Cloudy: 40%, Rainy: 30%
+- Rainy → Sunny: 20%, Cloudy: 40%, Rainy: 40%
+
+| State | Stationary Probability |
+|-------|------------------------|
+| ☀️ Sunny | **46.2%** |
+| ☁️ Cloudy | **30.8%** |
+| 🌧️ Rainy | **23.1%** |
+
+#### Pop Music Chord Progression Distribution
+
+Trained on common progressions (I-V-vi-IV, I-IV-V-IV, vi-IV-I-V):
+
+| Chord | Frequency |
+|-------|----------|
+| IV | ~36% |
+| V | ~30% |
+| vi | ~17% |
+| I | ~17% |
+
+#### Text Generation Entropy
+
+| N-gram Order | Entropy | Behavior |
+|--------------|---------|----------|
+| Order 1 (unigram) | ~1.3 bits | More random, creative |
+| Order 2 (bigram) | ~0.2 bits | More coherent |
+| Order 3+ | <0.15 bits | Near-deterministic |
+
+### 🚀 Quick Start
+
+**Rust** (original):
+```bash
+cd mini-markov
+cargo test                            # 13 tests passing
+cargo run --bin demo_weather --release
+```
+
+**Python** (8/8 tests passing):
+```bash
+cd mini-markov-python
+pip install -e ".[dev]"
+pytest tests/ -v
+python -m mini_markov.demo_weather
+python -m mini_markov.demo_text
+python -m mini_markov.demo_music
+```
+
+**Go**:
+```bash
+cd mini-markov-go
+go test ./...
+go run ./cmd/demo_weather
+```
+
+**Java** (requires JDK 8+):
+```bash
+cd mini-markov-java
+mvn test
+mvn exec:java -Dexec.mainClass="com.minimarkov.demo.DemoWeather"
+```
+
+### 📁 Project Structure
+
+| Language | Directory | Core Files |
+|----------|-----------|------------|
+| Rust | `mini-markov/` | `chain.rs`, `text.rs`, `state.rs` |
+| Go | `mini-markov-go/` | `markov/chain.go`, `markov/text.go`, `markov/state.go` |
+| Java | `mini-markov-java/` | `MarkovChain.java`, `TextGenerator.java`, `StateChain.java` |
+| Python | `mini-markov-python/` | `chain.py`, `text.py`, `state.py` |
+
+### 📖 Documentation
+
+- [mini-markov/README.md](mini-markov/README.md) - Rust implementation
+- [mini-markov-go/README.md](mini-markov-go/README.md) - Go implementation
+- [mini-markov-java/README.md](mini-markov-java/README.md) - Java implementation
+- [mini-markov-python/README.md](mini-markov-python/README.md) - Python implementation
+
+---
+
 ## Neural Network Animation
 
 Interactive visualization of forward and backward propagation through a neural network.
@@ -1046,7 +1146,10 @@ cd neural-network-animation && npm install && npm run dev
 - **GSAP**: Smooth animations
 - **Vite**: Fast build tool and development server
 - **Tailwind CSS**: Styling
-- **Rust**: Mini-diffusion implementation (ndarray, image crates)
+- **Rust**: Mini-diffusion, Mini-NN, Mini-Markov implementations (ndarray, image crates)
+- **Go**: Mini-Markov implementation
+- **Java**: Mini-Markov implementation (Maven)
+- **Python**: Mini-Markov implementation
 
 ## Contributing
 
