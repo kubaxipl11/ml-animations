@@ -252,9 +252,11 @@ function App() {
     setMode('forward');
   };
 
-  // Render connections
+  // Render connections - draw from right edge of source to left edge of target
   const renderConnections = () => {
     const connections = [];
+    const neuronRadius = 24;
+    
     for (let l = 0; l < NETWORK.layers.length - 1; l++) {
       const fromLayer = NETWORK.layers[l];
       const toLayer = NETWORK.layers[l + 1];
@@ -265,21 +267,32 @@ function App() {
           const to = getPosition(l + 1, j);
           const key = `${l}-${i}-${j}`;
           const weight = weights[l] ? weights[l][i]?.[j] : 0;
-          const strokeWidth = Math.abs(weight) * 2 + 0.5;
+          const strokeWidth = Math.min(Math.abs(weight) * 1.5 + 0.5, 3);
+          
+          // Calculate angle between neurons
+          const dx = to.x - from.x;
+          const dy = to.y - from.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+          const unitX = dx / distance;
+          const unitY = dy / distance;
+          
+          // Start from edge of source neuron, end at edge of target neuron
+          const x1 = from.x + unitX * neuronRadius;
+          const y1 = from.y + unitY * neuronRadius;
+          const x2 = to.x - unitX * neuronRadius;
+          const y2 = to.y - unitY * neuronRadius;
           
           connections.push(
             <line
               key={key}
               ref={(el) => (connectionRefs.current[key] = el)}
-              x1={from.x}
-              y1={from.y}
-              x2={to.x}
-              y2={to.y}
-              stroke="#6366f1"
+              x1={x1}
+              y1={y1}
+              x2={x2}
+              y2={y2}
+              stroke={weight >= 0 ? "#6366f1" : "#ef4444"}
               strokeWidth={strokeWidth}
-              strokeOpacity={0.6}
-              strokeDasharray="100"
-              strokeDashoffset="0"
+              strokeOpacity={0.5}
             />
           );
         }
