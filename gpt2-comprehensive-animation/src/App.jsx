@@ -4,6 +4,9 @@ import { steps } from './stepsConfig';
 import Step1Tokenization from './steps/Step1Tokenization';
 import Step2Positional from './steps/Step2Positional';
 import Step3Attention from './steps/Step3Attention';
+import Step4FFN from './steps/Step4FFN';
+import Step5Norm from './steps/Step5Norm';
+import Step6Architecture from './steps/Step6Architecture';
 
 export default function App() {
     const [completedSteps, setCompletedSteps] = useState(new Set());
@@ -84,6 +87,9 @@ export default function App() {
                             <Route path="/step1" element={<Step1Tokenization onComplete={() => markComplete(1)} onNext={goToNext} />} />
                             <Route path="/step2" element={<Step2Positional onComplete={() => markComplete(2)} onNext={goToNext} onPrev={goToPrev} />} />
                             <Route path="/step3" element={<Step3Attention onComplete={() => markComplete(3)} onNext={goToNext} onPrev={goToPrev} />} />
+                            <Route path="/step4" element={<Step4FFN onComplete={() => markComplete(4)} onNext={goToNext} onPrev={goToPrev} />} />
+                            <Route path="/step5" element={<Step5Norm onComplete={() => markComplete(5)} onNext={goToNext} onPrev={goToPrev} />} />
+                            <Route path="/step6" element={<Step6Architecture onComplete={() => markComplete(6)} onNext={goToNext} onPrev={goToPrev} />} />
                         </Routes>
                     </div>
                 </main>
